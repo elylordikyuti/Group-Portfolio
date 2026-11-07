@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Semicolon</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">Semicolon<span>Portfolio.</span></a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- THEME TOGGLE BUTTON -->
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Switch between dark and light mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <p class="greeting">HELLO, WELCOME TO OUR TEAM</p>
+
+            <h1> We are <span>Team Semicolon</span></h1>
+
+            <h2>We're <span class="typing-text">BSIT Students</span></h2>
+
+            <p class="description">
+                We are a passionate group of Information Technology students who enjoy
+                creating websites, exploring new technologies, and developing
+                creative solutions to real-world problems. Together, we turn ideas into reality.
+            </p>
+
+            <div class="social-links">
+                <a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <a href="#project" class="btn">Explore Our Work <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="home-image">
+            <div class="image-circle">
+                <img src="semicolon.png" alt="Team Logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="team section" id="team">
+        <div class="section-heading">
+            <p>MEET THE PEOPLE BEHIND THE PROJECT</p>
+            <h2>Our <span>Team</span></h2>
+            <p class="section-description">
+                A team of passionate individuals working together
+                to turn ideas into reality.
+            </p>
+        </div>
+
+        <div class="team-container">
+            <!-- PROGRAMMER -->
+            <div class="team-card">
+                <div class="team-card-inner">
+                    <div class="team-card-front">
+                        <img src="wel.jpg" alt="Programmer">
+                        <h3>Programmer</h3>
+                        <p>Hover to discover my role</p>
+                    </div>
+                    <div class="team-card-back">
+                        <i class="fas fa-code"></i>
+                        <h3>Programmer</h3>
+                        <p>Responsible for coding, developing,
+                        and maintaining the system.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ANALYST -->
+            <div class="team-card">
+                <div class="team-card-inner">
+                    <div class="team-card-front">
+                        <img src="elfili.jpg" alt="Analyst">
+                        <h3>System Analyst</h3>
+                        <p>Hover to discover my role</p>
+                    </div>
+                    <div class="team-card-back">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>System Analyst</h3>
+                        <p>Responsible for analyzing system
+                        requirements and identifying solutions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT MANAGER -->
+            <div class="team-card">
+                <div class="team-card-inner">
+                    <div class="team-card-front">
+                        <img src="baby.jpg" alt="Project Manager">
+                        <h3>Project Manager</h3>
+                        <p>Hover to discover my role</p>
+                    </div>
+                    <div class="team-card-back">
+                        <i class="fas fa-tasks"></i>
+                        <h3>Project Manager</h3>
+                        <p>Responsible for planning, organizing,
+                        and managing project activities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TECHNICAL WRITER -->
+            <div class="team-card">
+                <div class="team-card-inner">
+                    <div class="team-card-front">
+                        <img src="bro.jpg" alt="Technical Writer">
+                        <h3>Technical Writer</h3>
+                        <p>Hover to discover my role</p>
+                    </div>
+                    <div class="team-card-back">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Technical Writer</h3>
+                        <p>Responsible for preparing,
+                        documenting, and organizing
+                        technical information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skill section" id="skill">
+        <div class="section-heading">
+            <p>WHAT WE CAN DO</p>
+            <h2>Our Technical <span>Skills</span></h2>
+            <p class="section-description">
+                Technologies and tools that we use in developing projects.
+            </p>
+        </div>
+
+        <div class="skills-container">
+            <div class="skill-card">
+                <i class="fab fa-html5 html-icon"></i>
+                <h3>HTML5</h3>
+                <div class="progress-bar">
+                    <div class="progress html-progress"><span>90%</span></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt css-icon"></i>
+                <h3>CSS3</h3>
+                <div class="progress-bar">
+                    <div class="progress css-progress"><span>85%</span></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js js-icon"></i>
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress js-progress"><span>70%</span></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-php php-icon"></i>
+                <h3>PHP</h3>
+                <div class="progress-bar">
+                    <div class="progress php-progress"><span>75%</span></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database db-icon"></i>
+                <h3>MySQL</h3>
+                <div class="progress-bar">
+                    <div class="progress mysql-progress"><span>80%</span></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-python python-icon"></i>
+                <h3>Python</h3>
+                <div class="progress-bar">
+                    <div class="progress python-progress"><span>65%</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT SECTION -->
+    <section class="project section" id="project">
+        <div class="section-heading">
+            <p>OUR RECENT WORK</p>
+            <h2>Featured <span>Projects</span></h2>
+            <p class="section-description">
+                Some of the projects we have developed and worked on.
+            </p>
+        </div>
+
+        <div class="project-container">
+            <div class="project-card">
+                <img src="system.jpg" alt="Parking & Fuel Management System">
+                <div class="project-info">
+                    <span>WEB AND MOBILE DEVELOPMENT</span>
+                    <h3>Parking & Fuel Management</h3>
+                    <p>A digital platform for managing parking reservations, vehicle information, parking slot availability, and fuel operations.</p>
+                    <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="portfolio.png" alt="Portfolio Website">
+                <div class="project-info">
+                    <span>FRONTEND DEVELOPMENT</span>
+                    <h3>Team Portfolio Website</h3>
+                    <p>A responsive team website showcasing our background, technical skills, and development projects.</p>
+                    <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION (NEW LAYOUT) -->
+    <section class="contact section" id="contact">
+        <div class="section-heading">
+            <p>GET IN TOUCH WITH US</p>
+            <h2>Contact <span>Us</span></h2>
+            <p class="section-description">
+                Have a question or want to work with us? Send us a message.
+            </p>
+        </div>
+
+        <div class="contact-wrapper">
+            
+            <!-- KALIWA: TEAM DIRECTORY -->
+            <div class="contact-team-list">
+                <h3>Meet the Team</h3>
+                
+                <!-- Member 1 -->
+                <div class="team-list-item">
+                    <div class="team-list-left">
+                        <img src="wel.jpg" alt="Welfred">
+                        <div>
+                            <h4>Welfred Ragmac</h4>
+                            <p>Programmer</p>
+                        </div>
+                    </div>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=johndoe@gmail.com&su=Inquiry" target="_blank" class="view-profile-btn">View Profile</a>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="team-list-item">
+                    <div class="team-list-left">
+                        <img src="elfili.jpg" alt="Elylordi">
+                        <div>
+                            <h4>Elylordi Adaro</h4>
+                            <p>System Analyst</p>
+                        </div>
+                    </div>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=janesmith@gmail.com&su=Inquiry" target="_blank" class="view-profile-btn">View Profile</a>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-list-item">
+                    <div class="team-list-left">
+                        <img src="baby.jpg" alt="Ashley">
+                        <div>
+                            <h4>Ashley Krizzhia Rhaye Rhoda</h4>
+                            <p>Project Manager</p>
+                        </div>
+                    </div>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=marklee@gmail.com&su=Inquiry" target="_blank" class="view-profile-btn">View Profile</a>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-list-item">
+                    <div class="team-list-left">
+                        <img src="bro.jpg" alt="Joshua">
+                        <div>
+                            <h4>Joshua Dane</h4>
+                            <p>Technical Writer</p>
+                        </div>
+                    </div>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=christan@gmail.com&su=Inquiry" target="_blank" class="view-profile-btn">View Profile</a>
+                </div>
+            </div>
+
+            <!-- KANAN: GENERAL INQUIRY FORM -->
+            <div class="contact-form-container">
+                <h3>General Inquiry</h3>
+                <p class="form-subtitle">Send us a direct message at <strong>semicolon@gmail.com</strong></p>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Subject</label>
+                        <input type="text" name="subject" placeholder="e.g., Web project collaboration" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Message</label>
+                        <textarea name="message" rows="5" placeholder="Tell us about yourself or your organization, what you need, and any relevant timeline or project details." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Send message
+                    </button>
+                    <p class="form-status" id="formStatus"></p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>Semicolon<span>Portfolio.</span></h2>
+        <p>Designed and developed with passion.</p>
+        <p class="copyright">
+            &copy; <span id="year"></span> Group Semicolon. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js.js"></script>
+</body>
+</html>

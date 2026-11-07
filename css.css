@@ -1,0 +1,920 @@
+/* =====================================================
+   GENERAL SETTINGS
+   ===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: background-color 0.25s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* ---- DARK THEME (default) ---- */
+:root {
+    --background: #0b0b14;
+    --card: #151523;
+    --primary: #a855f7;
+    --secondary: #06b6d4;
+    --white: #ffffff;
+    --gray: #a1a1aa;
+    --border-light: rgba(255, 255, 255, 0.07);
+    --shadow-color: rgba(168, 85, 247, 0.15);
+    --nav-bg: rgba(11, 11, 20, 0.92);
+    --footer-bg: #10101c;
+    --progress-bg: #29293a;
+    --text-on-card: #d4d4d8;
+    --team-card-bg: #151523;
+    --team-back-bg: linear-gradient(145deg, #25113d, #111827);
+    --icon-color: #06b6d4;
+    --body-text: #ffffff;
+}
+
+/* ---- LIGHT THEME ---- */
+body.light-mode {
+    --background: #f5f0fc;
+    --card: #ffffff;
+    --primary: #8b5cf6;
+    --secondary: #0891b2;
+    --white: #0b0b14;
+    --gray: #4b5563;
+    --border-light: rgba(0, 0, 0, 0.08);
+    --shadow-color: rgba(139, 92, 246, 0.2);
+    --nav-bg: rgba(255, 255, 255, 0.92);
+    --footer-bg: #e9e2f5;
+    --progress-bg: #d1d5db;
+    --text-on-card: #374151;
+    --team-card-bg: #ffffff;
+    --team-back-bg: linear-gradient(145deg, #ede9fe, #e0f2fe);
+    --icon-color: #0891b2;
+    --body-text: #0b0b14;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: var(--body-text);
+    transition: background-color 0.3s, color 0.2s;
+}
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: var(--nav-bg);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border-light);
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.navbar {
+    height: 75px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--body-text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.logo span,
+footer h2 span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+/* ---- Theme toggle button ---- */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+.theme-toggle:hover {
+    background: var(--primary);
+    color: #ffffff;
+    transform: rotate(15deg);
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    color: var(--body-text);
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+/* =====================================================
+   HOME
+   ===================================================== */
+.home {
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+    padding: 130px 30px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.home-content {
+    flex: 1;
+}
+
+.greeting,
+.section-heading > p:first-child {
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.home h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.2;
+    font-weight: 800;
+    color: var(--body-text);
+}
+
+.home h1 span,
+.home h2 span,
+.section-heading h2 span {
+    color: var(--primary);
+}
+
+.home h2 {
+    font-size: 25px;
+    margin-top: 12px;
+    color: var(--body-text);
+}
+
+.description {
+    max-width: 570px;
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 2;
+    margin: 20px 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    height: 42px;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    color: var(--primary);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateY(-5px);
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--primary), #7c3aed);
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+/* =====================================================
+   HOME IMAGE (ROTATING LIGHT EFFECT)
+   ===================================================== */
+.home-image {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-circle {
+    width: min(350px, 80vw);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 9px;
+    /* Rotating gradient light */
+    background: conic-gradient(
+        from 0deg, 
+        transparent 0%, 
+        var(--primary) 25%, 
+        var(--secondary) 50%, 
+        transparent 75%, 
+        transparent 100%
+    );
+    /* Combine rotation and glow pulse */
+    animation: spinLight 3s linear infinite, glowPulse 2.5s infinite alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Ensures the glow stays behind the image */
+    position: relative;
+    z-index: 1;
+}
+
+/* Inner solid circle to frame the image */
+.image-circle::before {
+    content: "";
+    position: absolute;
+    inset: 9px; /* Matches padding */
+    background: var(--background);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+body.light-mode .image-circle {
+    animation: spinLight 3s linear infinite, glowPulseLight 2.5s infinite alternate;
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Shows the entire image */
+    border-radius: 50%;
+    background: var(--card);
+    position: relative;
+    z-index: 2;
+    padding: 10px; /* Adds space around the logo */
+}
+
+/* Spinning Light Keyframe */
+@keyframes spinLight {
+    0% {
+        background: conic-gradient(from 0deg, transparent 0%, var(--primary) 25%, var(--secondary) 50%, transparent 75%, transparent 100%);
+    }
+    100% {
+        background: conic-gradient(from 360deg, transparent 0%, var(--primary) 25%, var(--secondary) 50%, transparent 75%, transparent 100%);
+    }
+}
+
+/* Glow Keyframes */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 15px rgba(168, 85, 247, 0.4), 0 0 30px rgba(6, 182, 212, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(168, 85, 247, 0.8), 0 0 60px rgba(6, 182, 212, 0.6);
+    }
+}
+
+@keyframes glowPulseLight {
+    0% {
+        box-shadow: 0 0 15px rgba(139, 92, 246, 0.3), 0 0 30px rgba(8, 145, 178, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(139, 92, 246, 0.6), 0 0 60px rgba(8, 145, 178, 0.5);
+    }
+}
+
+.floating-text {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    padding: 12px 20px;
+    background: var(--card);
+    border: 1px solid var(--primary);
+    border-radius: 30px;
+    font-size: 12px;
+    color: var(--body-text);
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    z-index: 10;
+}
+
+/* =====================================================
+   ALL SECTIONS
+   ===================================================== */
+.section {
+    padding: 100px 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    margin-bottom: 12px;
+    color: var(--body-text);
+}
+
+.section-description {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+/* =====================================================
+   TEAM — 3D FLIP CARDS
+   ===================================================== */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    perspective: 1000px;
+}
+
+.team-card {
+    height: 360px;
+    background: transparent;
+    border: none;
+    border-radius: 18px;
+    perspective: 1000px;
+    overflow: visible;
+}
+
+.team-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.team-card:hover .team-card-inner {
+    transform: rotateY(180deg);
+}
+
+.team-card-front,
+.team-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    background: var(--team-card-bg);
+    transition: background 0.25s, border-color 0.2s;
+}
+
+.team-card-front img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    margin-bottom: 20px;
+    transition: 0.4s;
+    background: var(--card);
+}
+
+.team-card-front h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: var(--body-text);
+}
+
+.team-card-front p {
+    color: var(--gray);
+    font-size: 11px;
+}
+
+.team-card-back {
+    transform: rotateY(180deg);
+    background: var(--team-back-bg);
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.2);
+}
+
+.team-card-back i {
+    font-size: 45px;
+    color: var(--icon-color);
+    margin-bottom: 25px;
+}
+
+.team-card-back h3 {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.team-card-back p {
+    color: var(--text-on-card);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.team-card:hover {
+    box-shadow: 0 15px 35px var(--shadow-color);
+}
+
+/* =====================================================
+   SKILLS
+   ===================================================== */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    background: var(--card);
+    border: 1px solid var(--border-light);
+    border-radius: 15px;
+    padding: 28px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--primary);
+}
+
+.skill-card > i {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.html-icon { color: #e34f26; }
+.css-icon  { color: #1572b6; }
+.js-icon   { color: #f7df1e; }
+.php-icon  { color: #777bb4; }
+.db-icon   { color: #00bcd4; }
+.python-icon { color: #3776ab; }
+
+.skill-card h3 {
+    font-size: 16px;
+    margin-bottom: 18px;
+    color: var(--body-text);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--progress-bg);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    position: relative;
+    animation: loadSkill 1.5s ease;
+}
+
+.progress span {
+    display: none;
+}
+
+.html-progress   { width: 90%; }
+.css-progress    { width: 85%; }
+.js-progress     { width: 70%; }
+.php-progress    { width: 75%; }
+.mysql-progress  { width: 80%; }
+.python-progress { width: 65%; }
+
+@keyframes loadSkill {
+    from { width: 0; }
+}
+
+/* =====================================================
+   PROJECTS  (centered)
+   ===================================================== */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: var(--card);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    transition: 0.3s;
+    flex: 0 1 380px;
+    width: 100%;
+    max-width: 380px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    padding: 23px;
+}
+
+.project-info > span {
+    color: var(--secondary);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.project-info h3 {
+    margin: 12px 0;
+    font-size: 17px;
+    color: var(--body-text);
+}
+
+.project-info p {
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-link:hover {
+    color: var(--secondary);
+}
+
+/* =====================================================
+   CONTACT DIRECTORY (Based on screenshot)
+   ===================================================== */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* --- Kaliwa: Team List --- */
+.contact-team-list {
+    background: var(--card);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.contact-team-list h3 {
+    font-size: 16px;
+    color: var(--body-text);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.team-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.team-list-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.team-list-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Maliit at naka-circle na picture (45px) */
+.team-list-left img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+}
+
+.team-list-left h4 {
+    font-size: 14px;
+    color: var(--body-text);
+    margin-bottom: 2px;
+}
+
+.team-list-left p {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.view-profile-btn {
+    font-size: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.view-profile-btn:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+/* --- Kanan: General Inquiry Form --- */
+.contact-form-container {
+    background: var(--card);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.contact-form-container h3 {
+    font-size: 18px;
+    color: var(--body-text);
+    margin-bottom: 5px;
+}
+
+.form-subtitle {
+    font-size: 13px;
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--body-text);
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: var(--background);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    color: var(--body-text);
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    outline: none;
+    resize: vertical;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary);
+}
+
+/* Blue Submit Button */
+.btn-submit {
+    width: 100%;
+    background: #2563eb; /* Blue */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    background: var(--footer-bg);
+    border-top: 1px solid var(--border-light);
+    transition: background 0.3s, border-color 0.2s;
+}
+
+footer h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: var(--body-text);
+}
+
+footer p {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+.copyright {
+    margin-top: 15px;
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 900px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--nav-bg);
+        backdrop-filter: blur(15px);
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 25px;
+        display: none;
+        border-bottom: 1px solid var(--border-light);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .theme-toggle {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .nav-links li:last-child {
+        margin-top: 5px;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 120px;
+        gap: 45px;
+    }
+
+    .home-image {
+        width: 100%;
+    }
+
+    .image-circle {
+        width: 230px;
+    }
+
+    .floating-text {
+        right: 5%;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .team-container,
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact section goes to 1 column on mobile */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .section {
+        padding: 75px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .team-container,
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        max-width: 320px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .home h2 {
+        font-size: 20px;
+    }
+
+    .home h1 {
+        font-size: 38px;
+    }
+
+    .project-container {
+        max-width: 100%;
+    }
+
+    .project-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
